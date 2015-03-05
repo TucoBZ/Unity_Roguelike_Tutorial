@@ -64,10 +64,10 @@ public abstract class MovingObject : MonoBehaviour { 		//Abstract permite criar 
 		T hitComponent = hit.transform.GetComponent<T> ();
 
 		if (!canMove && hitComponent != null) {					//Quer dizer que o caminho tem um obstaculo
-			OnCanMove(hitComponent);
+			OnCantMove(hitComponent);
 		}
 	}
 
-	protected abstract void OnCanMove <T> (T component)		//Pode ser reescrita, e por ser abstrata não precisa de brackets "{}" 
+	protected abstract void OnCantMove <T> (T component)		//Pode ser reescrita, e por ser abstrata não precisa de brackets "{}" 
 		where T : Component; 
 }
